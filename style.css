@@ -7,7 +7,8 @@
 }
 
 body{
-  background: url(assets/bg.jpg) top center/cover fixed no-repeat;
+  background: #121214 url(assets/bg.jpg) top center/cover fixed no-repeat;
+  background-size: 100% auto;
   color: white;
 }
 
@@ -23,7 +24,7 @@ header{
 }
 
 header img{
-  width: 15rem; /*Anota*/
+  width: 15rem;
 }
 
 main{
@@ -33,13 +34,13 @@ main{
 }
 
 section{
-  background-image: linear-gradient(90deg, #9672FC 0%, #43e7ad 50%, #e2d45c 100%); /*Anota*/
+  background-image: linear-gradient(90deg, #9672FC 0%, #43e7ad 50%, #e2d45c 100%);
   border-radius: 0.625rem;
   padding: 0.25rem 0px 0px 0px;
   opacity: 0;
   transform: translateY(2rem);
 
-  animation-name: appear; /*Anota*/
+  animation-name: appear;
   animation-duration: 700ms;
   animation-fill-mode: forwards;
 }
@@ -51,7 +52,7 @@ section > div{
 }
 
 section h2{
-  letter-spacing: -0.47px; /*Anota: Está diminuindo o espaço das letras*/
+  letter-spacing: -0.47px;
 }
 
 section p{
@@ -60,7 +61,7 @@ section p{
   color: #a1a1aa;
 }
 
-@keyframes appear { /*Anota*/
+@keyframes appear {
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -75,7 +76,7 @@ form{
 }
 
 input, select{
-  all: unset; /*Anota*/
+  all: unset; /*Nota*/
   border: 2px solid #9147ff;
   border-radius: 0.5rem;
   padding: 0.675rem;
@@ -84,7 +85,7 @@ input, select{
 }
 
 input{
-  flex: 1; /*Anota: Preenche todo o espaço possível antes de quebrar a linha*/
+  flex: 1;
 }
 
 button{
@@ -105,4 +106,34 @@ button:hover{
   cursor: pointer;
   transform: translateY(-0.25rem);
   box-shadow: 0 5px 1rem rgba(255, 248, 107, 0.2);
+}
+
+button:disabled{
+  transition: initial;
+  transform: translateY(0);
+  box-shadow: initial;
+  cursor: not-allowed;
+  color: black;
+}
+
+.loading{
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+#aiResponse{
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  border-left: 4px solid #43e7ad;
+  display: none;
+}
+
+#aiResponse ul{
+  padding-left: 1.5rem;
 }
