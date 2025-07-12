@@ -1,5 +1,13 @@
 @charset "UTF-8";
 
+:root{
+  --main-color: #0711D9;
+  --second-color: #F20519;
+  --third-color: #05F2DB;
+  --dark-color: #010A26;
+  --darkblue-color: #050259;
+}
+
 *{
   margin: 0px;
   padding: 0px;
@@ -34,7 +42,7 @@ main{
 }
 
 section{
-  background-image: linear-gradient(90deg, #9672FC 0%, #43e7ad 50%, #e2d45c 100%);
+  background-image: linear-gradient(90deg, var(--second-color) 0%, var(--main-color) 50%, var(--third-color) 100%);
   border-radius: 0.625rem;
   padding: 0.25rem 0px 0px 0px;
   opacity: 0;
@@ -48,7 +56,7 @@ section{
 section > div{
   padding: 1.5rem 2rem 2rem 2rem;
   border-radius: 0.5rem;
-  background-color: #2a2634;
+  background-color: var(--dark-color);
 }
 
 section h2{
@@ -77,11 +85,11 @@ form{
 
 input, select{
   all: unset; /*Nota*/
-  border: 2px solid #9147ff;
+  border: 2px solid var(--main-color);
   border-radius: 0.5rem;
   padding: 0.675rem;
   font-size: 0.875rem;
-  background-color: #00000066;
+  background-color: var(--dark-color);
 }
 
 input{
@@ -94,7 +102,7 @@ button{
   width: 100%;
   border: 0;
   border-radius: 0.5rem;
-  background-image: linear-gradient(90deg, #e2d45c 0%, #43e7ad 50%, #9672FC 100%);
+  background-image: linear-gradient(90deg, var(--second-color) 0%, var(--main-color) 50%, var(--third-color)  100%);
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
