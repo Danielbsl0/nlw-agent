@@ -3,11 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Assistente de meta</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 </head>
 <body>
   <header>
@@ -16,17 +17,17 @@
 
   <main>
     <section>
-      <div>
+      <div class="container">
         <h2 class="title">Assistente de Meta</h2>
         <p>Pergunte sobre estratégias, build e dicas para os seus jogos!</p>
 
         <form id="form">
           <input type="password" id="apiKey" placeholder="Informe a API KEY do Gemini" required>
-          <select id="gameSelect">
+          <select id="gameSelect" style="width: 200px;">
             <option value="">Selecione um jogo</option>
-            <option value="valorant">Valorant</option>
-            <option value="lol">League of Legends</option>
-            <option value="csgo">CS:GO</option>
+            <option value="valorant" data-img="img/jogos/valorant.png">Valorant</option>
+            <option value="lol" data-img="img/jogos/lol.png">League of Legends</option>
+            <option value="csgo" data-img="img/jogos/csgo.png">CS:GO</option> <option value="brawl-stars" data-img="img/jogos/brawl-stars.png">Brawl Stars</option>
           </select>
 
           <input type="text" placeholder="Ex: Melhor build para ADC ..." id="qInput">
@@ -44,6 +45,7 @@
     </section>
   </main>
   <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
-  <script src="script.js"></script>
-</body>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script src="script.js" defer></script> </body>
 </html>

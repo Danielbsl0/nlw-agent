@@ -37,7 +37,7 @@ header img{
 
 main{
   max-width: 36rem;
-  width: 90%;
+  width: 90vw;
   margin: 3rem auto;
 }
 
@@ -84,7 +84,6 @@ form{
 }
 
 input, select{
-  all: unset; /*Nota*/
   border: 2px solid var(--main-color);
   border-radius: 0.5rem;
   padding: 0.675rem;
@@ -106,6 +105,7 @@ button{
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 1px;
+  color: rgb(214, 214, 214);
 
   transition: all 0.3s;
 }
@@ -138,7 +138,8 @@ button:disabled{
   background: rgba(0, 0, 0, 0.4);
   border-radius: 0.5rem;
   padding: 1.25rem;
-  border-left: 4px solid #43e7ad;
+  border-left: 4px solid var(--third-color);
+  display: none;
   display: none;
 }
 
