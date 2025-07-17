@@ -89,6 +89,7 @@ input, select{
   padding: 0.675rem;
   font-size: 0.875rem;
   background-color: var(--dark-color);
+  color: white
 }
 
 input{

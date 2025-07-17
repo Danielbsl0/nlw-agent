@@ -15,7 +15,9 @@ const markdownToHTML = (text) =>{
 const askAi = async (question, game, apiKey)=> {
   const model = "gemini-2.5-flash";
   const gemniURL = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
-  const pergunta = `
+  const pergunta = ``;
+  if(game.innerText == "lol"){
+    pergunta = `
     ## Especialidade
     Você é um especialista assitente de meta para o jogo ${game}
 
@@ -43,6 +45,7 @@ const askAi = async (question, game, apiKey)=> {
     ---
     Aqui está a pergunta do usuário: ${question}
   `;
+  }
 
   const contents = [{
     role: "user",
